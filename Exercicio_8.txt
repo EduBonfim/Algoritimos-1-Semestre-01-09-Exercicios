@@ -1,0 +1,27 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_8 {
+    public static void main(String[] args) {
+        Scanner Dados = new Scanner(System.in);
+       
+        System.out.println("Faça um algoritmo que verifique a validade de uma senha");
+        System.out.println("Sabendo que a senha é: 'R10p5' ");
+        System.out.println("Imprimir mensagem de 'acesso concedido' ou 'acesso negado'");
+        System.out.println("");
+        
+        System.out.print("Digite a sua senha:");
+        String senha = Dados.nextLine();
+        
+        if(senha.equals("R10p5")) {
+            System.out.println("Acesso concedido");
+        } else {
+            System.out.println("Acesso negado");
+        }
+        
+        Dados.close();
+    }
+}

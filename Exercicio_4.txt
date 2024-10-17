@@ -1,0 +1,34 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_4 {
+    public static void main(String[] args) {
+        Scanner Numeros = new Scanner(System.in);
+        
+        System.out.println("Ler dois numeros e apresenta-los em forma decrescente");
+        System.out.println("Supor que não sejam iguais");
+        System.out.println("");
+        
+
+        System.out.print("Digite o primeiro número: ");
+        float numero1 = Numeros.nextFloat();
+
+        System.out.print("Digite o segundo número: ");
+        float numero2 = Numeros.nextFloat();
+
+        if (numero1 > numero2) {
+            System.out.println("Ordem decrescente: " + numero1 + ", " + numero2);
+        } 
+        else if (numero2 > numero1) {
+            System.out.println("Ordem decrescente: " + numero2 + ", " + numero1);
+        } 
+        else {
+            System.out.println("Impossível listar! Os números " + numero1 + " e " + numero2 + " são iguais!");
+        }
+
+        Numeros.close();  
+    }
+}

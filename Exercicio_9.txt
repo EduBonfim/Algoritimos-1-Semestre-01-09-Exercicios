@@ -1,0 +1,39 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_9 {
+    public static void main(String[] args) {
+        Scanner Linha_crd = new Scanner(System.in);
+        
+        System.out.println("A prefeitura do RJ abriu uma linha de crédito para os funcionários estatuários");
+        System.out.println("O Valor máximo da prestação não poderá ultrapassar 30% do salário bruto.");
+        System.out.println("");
+        
+        System.out.print("Digite o nome do Funcionário: ");
+        String Funcionario = Linha_crd.nextLine();
+        
+        System.out.print("Digite o Salário Bruto: ");
+        double SalarioBruto = Linha_crd.nextDouble();
+        
+        System.out.print("Digite o valor da prestação: ");
+        double Prestacao = Linha_crd.nextDouble();
+        System.out.println("-----------------------------------------");
+        
+        double valorMaximoPrestacao = SalarioBruto * 0.30;
+        
+        if (Prestacao > valorMaximoPrestacao) {
+            System.out.println("Valor da prestação: R$ " + Prestacao);
+            System.out.println("Valor Maximo da prestação: "+valorMaximoPrestacao);
+            System.out.println("Empréstimo não pode ser concedido !");
+        } else {
+            System.out.println("Valor da prestação: R$ " + Prestacao);
+            System.out.println("Valor Maximo da prestação: "+valorMaximoPrestacao);
+            System.out.println("Empréstimo pode ser concedido !");
+        }
+
+        Linha_crd.close();
+    }
+}

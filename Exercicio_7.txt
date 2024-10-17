@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Exercicio_7 {
+    public static void main(String[] args) {
+        Scanner Dados = new Scanner(System.in);
+       
+        System.out.println("Faça um algoritmo que leia o salário e a quantidade de anos de cada funcionário");
+        System.out.println("e imprima o valor do bônus de 20% para funcionários com tempo de trabalho igual ou superior a 5 anos");
+        System.out.println("e 10% aos demais funcionários");
+        System.out.println("");
+        
+        System.out.print("Digite o nome do funcionário: ");
+        String funcionario = Dados.nextLine();
+        
+        System.out.print("Digite o tempo de trabalho em anos: ");
+        int tempo = Dados.nextInt();
+        
+        System.out.print("Digite o salário em Reais (Exemplo: xxxx): ");
+        double salario = Dados.nextDouble();
+        
+        if (tempo >= 5) {
+            double salarioComBonus = salario * 1.20; 
+            System.out.println("O salário do " + funcionario + " com um aumento de 20% é: R$ " + salarioComBonus);
+        } 
+        else {
+            double salarioComBonus = salario * 1.10; 
+            System.out.println("O salário do " + funcionario + " com um aumento de 10% é: R$ " + salarioComBonus);
+        }
+        
+        Dados.close();
+    }
+}

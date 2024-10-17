@@ -1,0 +1,42 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_6 {
+    public static void main(String[] args) {
+        Scanner Dados = new Scanner(System.in);
+       
+        
+        System.out.println("Faça um algoritimo que leia a altura e o sexo de uma pessoa");
+        System.out.println("calcule e mostre seu peso ideal");
+        System.out.println("usar as formulas a seguir para calcular o peso ideal");
+        System.out.println("para o sexo masculino: p72,7 *altura -58");
+        System.out.println("para o sexo feminino: p62,1 *altura -44,7");
+        System.out.println("");
+        
+
+        System.out.print("Digite a altura em metros( exemplo: x.xx):  ");
+        double altura = Dados.nextDouble();
+        
+        System.out.print("Digite o sexo: (M) para Masculino e (F) para Feminino:  ");
+        char sexo = Dados.next().charAt(0);
+        
+        double P_ideal;
+            
+        if (sexo == 'M') {
+            P_ideal = (72.7 * altura) - 58;
+            System.out.println("O peso ideal para um homem com "+altura+" metros de altura é : "+P_ideal+" Kg ");
+        } 
+        else if (sexo == 'F') {
+            P_ideal = (62.1 * altura) - 44.7;
+            System.out.println("O peso ideal para uma mulher com "+altura+" metros de altura é : "+P_ideal+" Kg ");
+        }
+        else {
+            System.out.println("Digite o Sexo e a altura corretamente");
+        }
+        
+        Dados.close();
+    }
+}

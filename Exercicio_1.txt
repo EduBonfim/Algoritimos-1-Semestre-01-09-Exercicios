@@ -1,0 +1,30 @@
+//Eduardo Aparecido Bonfim Domingues
+//Curso: TADS - TURMA MANHÃ
+//CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_1
+{
+	public static void main(String[] args) {
+		System.out.println("Faça um algoritimo que leia um número inteiro.");
+		System.out.println("Se o numero for maior que 20...");
+		System.out.println("calcular e imprimir a metade dele");
+		System.out.println("");
+		
+		Scanner Leitor = new Scanner(System.in);
+		int Num;
+		
+		System.out.print("Digite um numero: ");
+		Num = Leitor.nextInt();
+		
+		if (Num >= 20){
+		    System.out.println("A metade desse numero é: "+Num /2);
+		}
+		
+		else {
+		    System.out.println("Digite um numero maior que 20!");
+		}
+		Leitor.close();
+	}
+}

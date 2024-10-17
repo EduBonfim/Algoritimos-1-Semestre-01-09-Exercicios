@@ -1,0 +1,51 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_10 {
+    public static void main(String[] args) {
+        Scanner Numeros = new Scanner(System.in);
+        
+        System.out.println("Faça um algoritimo para encontrar o maior número entre 3 números inteiros");
+        System.out.println("O algoritimo deve ler 3 números inteiros");
+        System.out.println("se forem todos iguais, imprimir: 'Os numeros são iguais'");
+        System.out.println("Caso contrário, imprimir o maior dos 3 números.");
+        System.out.println("");
+        
+        
+        System.out.print("Digite o primeiro numero: ");
+        int num1 = Numeros.nextInt();
+        
+        System.out.print("Digite o segundo  numero: ");
+        int num2 = Numeros.nextInt();
+        
+        System.out.print("Digite o terceiro numero: ");
+        int num3 = Numeros.nextInt();
+        System.out.println("------------------------");
+        
+        if (num1 == num2 && num1 == num3){
+            System.out.println("OS NUMEROS SÃO IGUAIS!");
+        }
+        else if (num2 == num1 && num2 == num3){
+            System.out.println("OS NUMEROS SÃO IGUAIS!");
+        }
+        else if (num3 == num1 && num3 == num2){
+            System.out.println("OS NUMEROS SÃO IGUAIS");
+        }
+        else if (num1 > num2 && num1 > num3){
+            System.out.println("O maior numero digitado é: "+num1);
+        }
+            
+        else if (num2> num1 && num2> num3){
+            System.out.println("O maior numero digitado é: "+num2);
+        }
+            
+        else {
+            System.out.println("O maior numero digitado é: "+num3);
+        }
+        
+         
+ }
+}

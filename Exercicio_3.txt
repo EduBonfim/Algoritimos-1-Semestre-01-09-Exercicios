@@ -1,0 +1,40 @@
+//Eduardo Aparecido Bonfim Domingues
+//Curso: TADS - TURMA MANHÃ
+//CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_3 {
+    public static void main (String[]args ){
+        
+        int Num1;
+        int Num2;
+        
+        Scanner Numeros = new Scanner(System.in);  
+        
+        System.out.println("Ler dois valores inteiros");
+        System.out.println("Se forem iguais, mostrar 'numeros iguais' ");
+        System.out.println("caso contrário, apresentar diferença do maior pelo menor");
+        System.out.println("");
+        
+        System.out.print("Digite o primeiro numero: ");
+        Num1 = Numeros.nextInt();
+        
+        System.out.print("Digite o segundo numero: ");
+        Num2 = Numeros.nextInt();
+        
+        if (Num1 == Num2) {
+            System.out.println("Os números " + Num1 + " e " + Num2 + " são iguais!");
+        } 
+        else if (Num1 > Num2) {
+            int dif1 = Num1 - Num2;
+            System.out.println("A diferença entre " + Num1 + " e " + Num2 + " é de: " + dif1);
+        }
+        else {
+            int dif2 = Num2 - Num1;
+            System.out.println("A diferença entre " + Num2 + " e " + Num1 + " é de: " + dif2);
+        }
+
+        Numeros.close();
+    }
+}

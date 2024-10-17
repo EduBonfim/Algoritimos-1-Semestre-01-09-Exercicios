@@ -1,0 +1,57 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_12 {
+    public static void main(String[] args) {
+        Scanner Dados = new Scanner(System.in);
+        
+        System.out.println("ler o salário de uma pessoa e calcular e imprimir");
+        System.out.println("o desconto do INSS (calculado!) de acordo com a tabela a seguir");
+        System.out.println(" <= R$600,00 Isento");
+        System.out.println(" >  R$600,00 e <= R$1200,00 , 20%");
+        System.out.println(" >  R$1200   e <= R$2000,00 , 25%");
+        System.out.println(" >= R$2000,00 30%");
+        System.out.println("_____________________");
+        
+        System.out.print("Digite seu nome: ");
+        String Nome = Dados.nextLine();
+        
+        System.out.print("Digite seu salário: R$");
+        double Salario = Dados.nextDouble(); 
+        
+        System.out.println("____________________________________________");
+        double desconto = 0.0; 
+        double salarioLiquido = Salario;
+        
+        if (Salario <= 600){
+            System.out.println("Isento de desconto do INSS!");
+        }
+        else if (Salario > 600 && Salario <= 1200){
+            desconto = Salario * 0.20;
+            System.out.println("O Desconto aplicado no INSS foi de 20%");
+        }
+        else if (Salario > 1200 && Salario <= 2000){
+            desconto = Salario * 0.25;
+            System.out.println("O Desconto aplicado no INSS foi de 25%");
+        }
+        else if (Salario > 2000){
+            desconto = Salario * 0.30;
+            System.out.println("O Desconto aplicado no INSS foi de 30%");
+        } else {
+            System.out.println("Informações incorretas!");
+        }
+        
+        
+        salarioLiquido = Salario - desconto;
+        
+        if (desconto > 0) {
+            System.out.printf("Total do desconto: R$ %.2f%n", desconto);
+            System.out.printf("Salário líquido após o desconto: R$ %.2f%n", salarioLiquido);
+        }
+        
+        Dados.close(); 
+    }
+}

@@ -1,0 +1,32 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_5 {
+    public static void main(String[] args) {
+        Scanner Numeros = new Scanner(System.in);
+        
+        System.out.println("Faça um algoritimo para ler um número inteiro");
+        System.out.println("Verifique se o número está no intervalo entre 50 e 100");
+        System.out.println("Se estiver, imprima: 'Pertence ao intervalo'");
+        System.out.println("Senão imprima: 'Não pertence ao intervalo'");
+        System.out.println("");
+        
+
+        System.out.print("Digite um número: ");
+        int numero = Numeros.nextInt();
+            
+
+        if (numero >= 50 && numero <=100) {
+            System.out.println("O numero "+numero+" Pertence ao intervalo ");
+        }
+        
+        else {
+            System.out.println("O numero "+numero+" Não pertence ao intervalo");
+        }
+        
+        Numeros.close();
+    }
+}

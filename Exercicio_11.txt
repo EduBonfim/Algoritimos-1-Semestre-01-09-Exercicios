@@ -1,0 +1,48 @@
+// Eduardo Aparecido Bonfim Domingues
+// Curso: TADS - TURMA MANHÃ
+// CPF 40781700809
+
+import java.util.Scanner;
+
+public class Exercicio_11 {
+    public static void main(String[] args) {
+        Scanner Dados = new Scanner(System.in);
+        
+        System.out.println("Faça um algoritmo que receba a idade de um nadador");
+        System.out.println("imprima a sua categoria seguindo as regras");
+        System.out.println("infantil A   5-7  Anos");
+        System.out.println("infantil B   8-10 Anos");
+        System.out.println("juvenil A   11-13 Anos");
+        System.out.println("juvenil B   14-17 Anos");
+        System.out.println("Sênior     18 ou Mais");
+        System.out.println("_____________________");
+        
+        System.out.print("Digite seu nome: ");
+        String Nome = Dados.nextLine();
+        
+        System.out.print("Digite sua idade: ");
+        int Idade = Dados.nextInt();
+        
+        System.out.println("____________________________________________");
+        
+        if (Idade <= 7){
+            System.out.print("O usuario "+Nome+" Pertence a Infantil A !");
+        }
+        else if (Idade >=8 && Idade <=10){
+            System.out.print("O usuario "+Nome+" Pertence a Infantil B !");
+        }
+        else if (Idade >=11 && Idade <=13){
+            System.out.print("O usuario "+Nome+" Pertence a Juvenil  A !");
+        }
+        else if (Idade >=14 && Idade <=17){
+            System.out.print("O usuario "+Nome+" Pertence a Juvenil  B !");
+        }
+        else{
+            System.out.print("O usuario "+Nome+" Pertence a Senior !");
+        }
+        
+  
+        
+         
+ }
+}
